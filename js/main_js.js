@@ -30,6 +30,7 @@ function init_div()
     animatedelements[i]=[];
     for(var j = 0;j<tempcontain.length;j++)
     {
+      console.log(tempcontain);
       animatedelements[i][j]=tempcontain[j];
     }
     console.log(containerlist[i].getBoundingClientRect().top);
@@ -64,28 +65,29 @@ function changeitems()
   console.log(posnext);
   for(var i =0; i<animatedelements[currentdiv].length; i++)
   {
-    doanimate(animatedelements[currentdiv], posthis);
+    doanimate(animatedelements[currentdiv][i], posthis);
     // $(animatedelements[currentdiv][i]).css("--position", posthis);
-    $(animatedelements[currentdiv]).css("transform", "rotate("+posthis/5+"deg)");
+    // $(animatedelements[currentdiv]).css("transform", "rotate("+posthis/5+"deg)");
   }
   for(var i =0; i<animatedelements[currentdiv+1].length; i++)
   {
     // $(animatedelements[currentdiv+1][i]).css("--position", posnext);
-    doanimate(animatedelements[currentdiv+1], posnext);
-    $(animatedelements[currentdiv+1]).css("transform", "rotate("+posnext/5+"deg)");
+    doanimate(animatedelements[currentdiv+1][i], posnext);
+    // $(animatedelements[currentdiv+1]).css("transform", "rotate("+posnext/5+"deg)");
   }
 }
 
-function doanimate(thediv, theposition)
+function doanimate(theobject, theposition)
 {
-  console.log("classname: "+thediv.className);
-  // switch (thediv.classname) {
-  //   case expression:
-  //
-  //     break;
-  //   default:
-  //
-  // }
+  console.log("classname: "+theobject.className);
+  switch (theobject.className) {
+    case ("action rotate"):
+    console.log("action rotate");
+    $(theobject).css("transform", "rotate("+theposition/5+"deg)");
+    break;
+    default:
+
+  }
 }
 
 

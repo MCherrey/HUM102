@@ -87,13 +87,44 @@ h2{
 }
 
 /*----------------------------------------------------------*/
+.showme{
+    display: none;
+}
+.showhim:hover .showme{
+    display : block;
+}
+.showhim:hover .hideme{
+    display : none;
+}
+
+/*-----------------------------------------------------------*/
+
 .action{
 }
 
 .action.rotate{
   transform: rotate(-180deg);
 }
+/*-----------------------------------------------------------*/
 
+.Row
+{
+    display: table;
+    height: auto;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+    padding-top: 15px;
+    background-color: white;
+}
+.Column
+{
+    display: table-cell;
+    word-wrap: break-word;
+    width: auto;
+
+    /*opacity: 0;*/
+}
 
 /*------------------------------------------------------------*/
 .startbutton {
