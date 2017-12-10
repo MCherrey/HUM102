@@ -10,6 +10,7 @@ var containerlist = document.getElementsByClassName("Container");
 var containertops = [];
 var containerbottoms = [];
 var animatedelements = [];
+var animating = false;
 
 function init_page()
 {
@@ -79,11 +80,14 @@ function changeitems()
 
 function doanimate(theobject, theposition)
 {
-  console.log("classname: "+theobject.className);
+  // console.log("classname: "+theobject.className);
   switch (theobject.className) {
     case ("action rotate"):
     console.log("action rotate");
     $(theobject).css("transform", "rotate("+theposition/5+"deg)");
+    break;
+    case("action fadein"):
+
     break;
     default:
 
@@ -91,10 +95,17 @@ function doanimate(theobject, theposition)
 }
 
 
-
+// function checkanimate(e)
+// {
+//   if (animating == false)
+//   {
+//     smoothscroll(e);
+//   }
+// }
 
 function smoothscroll(e)
 {
+  animating = true;
   if (typeof e == 'number')
   {
     {var e=e};
@@ -106,6 +117,7 @@ function smoothscroll(e)
   }
 
   console.log(e.keyCode);
+
   if(e== 40)
   {
     // window.scrollTo(containertops[currentdiv]);
@@ -124,4 +136,5 @@ function smoothscroll(e)
     }
   }
   window.focus();
+  animating = false;
 }

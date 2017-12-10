@@ -1,31 +1,28 @@
 .Container{
   height: 100vh;
   background-attachment: fixed;
-  background-position: top;
-  background-size: cover;
-  background-color: white;
   padding: 0;
   margin: 0;
   /*line-height: 0;*/
   display: block;
   /*vertical-align: : center;*/
   /*overflow: auto;*/
-
-}
-.Container.header{
-  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/security.gif");*/
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-attachment: fixed;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))*/
+
+
 }
+
 .titleh1{
   margin: 0px;
   text-align: center;
-  color: #4CAF50;
+  /*color: #4CAF50;*/
+  color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 5em;
-  padding: 10px;
-  /*text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.75);*/
+  font-size: 3em;
+  padding: 15px;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.75);
   text-shadow:
     /*-1px -1px 0 white,
     1px -1px 0 white,
@@ -36,11 +33,32 @@
 
 h2{
   font-family: 'Roboto', sans-serif;
-  font-size:2em;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.80), 0px 0px 30px rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size:1.75em;
   padding: 10px;
   text-align: center;
+  font-weight: 400;
 }
-
+h3 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size:1.75em;
+  padding: 10px;
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.90), 0px 0px 25px rgba(0, 0, 0, 0.80);
+}
+h4 {
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.80), 0px 0px 30px rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size:1.70em;
+  padding: 2px;
+  text-align: center;
+  font-weight: 300;
+}
 .Title{
   display: grid;
   justify-content: center;
@@ -50,6 +68,15 @@ h2{
   /*background-color: red;*/
 }
 
+.cropimg{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  align:"center";
+  justify-content: "center";
+  /*display: block;*/
+}
+
 .grid1
 {
   display: grid;
@@ -57,44 +84,87 @@ h2{
   width: 100%;
 
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 60% 40%;
+  grid-template-rows: 70% 30%;
   grid-template-areas:
         "maintext maintext image"
-        "sub1 sub2 sub3";
+        "sub sub sub";
   justify-items: center;
   align-items: center;
   justify-content: center;
 
 }
 
+.grid2
+{
+  display: grid;
+  height: 100%;
+  width: 100%;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20% 40% 40%;
+  grid-template-areas:
+        "maintext maintext maintext"
+        "sub sub sub"
+        "maintext maintext maintext";
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
 .maintext
 {
   grid-column: 1 / span 2;
   grid-row: 1;
+  padding: 10px;
 
 }
-.sub1{
-  padding: 7px;
+.sub{
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  /*background-color: red;*/
+  overflow: hidden;
+  text-align: center;
+
 }
-.sub2{
-  padding: 7px;
-}
-.sub3{
-  padding: 7px;
-}
-.image{
+.boxshadow{
+  /*max-width: 100%;
+  height: auto;*/
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.80);
+  outline-width: medium;
+  outline-color: white;
 
 }
 
 /*----------------------------------------------------------*/
-.showme{
+
+.showndiv{
+  /*display: block;*/
+  height: 100%;
+  width: 100%;
+  align: center;
+  margin: 0;
+
+}
+.hiddendiv{
     display: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /*padding-left: 3px;*/
+    /*padding-right: 3px;*/
+    margin: 0;
 }
-.showhim:hover .showme{
-    display : block;
-}
-.showhim:hover .hideme{
+.sub:hover .showndiv{
     display : none;
+    transition:all 1s ease-in;
+}
+.sub:hover .hiddendiv{
+    display : block;
+    transition:all 1s ease-in;
+    /*width: 100%;*/
+    /*hieght: 100%;*/
 }
 
 /*-----------------------------------------------------------*/
@@ -103,8 +173,14 @@ h2{
 }
 
 .action.rotate{
-  transform: rotate(-180deg);
+  transform: rotate(0deg);
 }
+
+.action.fadein{
+  display: none;
+}
+
+
 /*-----------------------------------------------------------*/
 
 .Row
@@ -113,15 +189,19 @@ h2{
     height: auto;
     width: 100%;
     table-layout: fixed;
-    border-spacing: 10px;
-    padding-top: 15px;
-    background-color: white;
+    /*border-spacing: 10px;*/
+    /*padding-top: 15px;*/
+    /*background-color: white;*/
 }
 .Column
 {
     display: table-cell;
     word-wrap: break-word;
     width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
 
     /*opacity: 0;*/
 }
@@ -173,6 +253,31 @@ h2{
 .startbutton:hover span:after {
   opacity: 1;
   right: 0;
+}
+/*------------------------------------------------*/
+
+.header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/Turbine-intro.gif");
+}
+
+.slide1{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/cameras-slide1.jpeg");
+}
+
+.slide2{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/building-slide2.jpg");
+}
+
+.slide3{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/budget-slide3.jpeg");
+}
+
+.slide4{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/lock-slide4.jpg");
+}
+
+.slide5{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/objective-slide5.jpeg");
 }
 
 
