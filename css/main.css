@@ -33,7 +33,7 @@
 
 h2{
   font-family: 'Roboto', sans-serif;
-  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.80), 0px 0px 30px rgba(0, 0, 0, 0.75);
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1),0px 0px 10px rgba(0, 0, 0, 1);
   color: white;
   font-size:1.75em;
   padding: 10px;
@@ -48,7 +48,7 @@ h3 {
   text-align: center;
   font-weight: 300;
   font-style: italic;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.90), 0px 0px 25px rgba(0, 0, 0, 0.80);
+  /*text-shadow: 3px 3px 2px rgba(150, 150, 150, 1), 0px 0px 30px rgba(0, 0, 0, 0.80);*/
 }
 h4 {
   font-family: 'Roboto', sans-serif;
@@ -101,7 +101,7 @@ h4 {
   width: 100%;
 
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 20% 40% 40%;
+  grid-template-rows: 20% 50% 30%;
   grid-template-areas:
         "maintext maintext maintext"
         "sub sub sub"
@@ -257,7 +257,7 @@ h4 {
 /*------------------------------------------------*/
 
 .header{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/Turbine-intro.gif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/intro-slide.jpeg");
 }
 
 .slide1{
@@ -280,6 +280,33 @@ h4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/objective-slide5.jpeg");
 }
 
+.slide6{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/money-slide6.jpg");
+}
+
+.slide7{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/run-slide7.jpeg");
+}
+
+.slide8{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/chart-slide8.jpeg");
+}
+
+.slide9{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/money-slide6.jpg");
+}
+
+.slide10{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/server-slide10.jpeg");
+}
+
+.slide11{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/puz-slide11.jpeg");
+}
+
+.slidecite{
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/money-slide6.jpg");*/
+}
 
 *, html, body {
     margin: 0;

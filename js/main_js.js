@@ -26,14 +26,14 @@ function init_div()
   {
     containertops[i] = containerlist[i].getBoundingClientRect().top +1;
     containerbottoms[i] = containerlist[i].getBoundingClientRect().bottom;
-    var tempcontain = containerlist[i].getElementsByClassName("action");
+    // var tempcontain = containerlist[i].getElementsByClassName("action");
 
-    animatedelements[i]=[];
-    for(var j = 0;j<tempcontain.length;j++)
-    {
-      console.log(tempcontain);
-      animatedelements[i][j]=tempcontain[j];
-    }
+    // animatedelements[i]=[];
+    // for(var j = 0;j<tempcontain.length;j++)
+    // {
+    //   console.log(tempcontain);
+    //   animatedelements[i][j]=tempcontain[j];
+    // }
     console.log(containerlist[i].getBoundingClientRect().top);
     console.log(containerlist[i]);
   }
@@ -64,34 +64,41 @@ function changeitems()
   posnext = (window.pageYOffset - containertops[currentdiv+1]);
   console.log(posthis);
   console.log(posnext);
-  for(var i =0; i<animatedelements[currentdiv].length; i++)
-  {
-    doanimate(animatedelements[currentdiv][i], posthis);
-    // $(animatedelements[currentdiv][i]).css("--position", posthis);
-    // $(animatedelements[currentdiv]).css("transform", "rotate("+posthis/5+"deg)");
-  }
-  for(var i =0; i<animatedelements[currentdiv+1].length; i++)
-  {
-    // $(animatedelements[currentdiv+1][i]).css("--position", posnext);
-    doanimate(animatedelements[currentdiv+1][i], posnext);
-    // $(animatedelements[currentdiv+1]).css("transform", "rotate("+posnext/5+"deg)");
-  }
+  var element1 = containerlist[currentdiv].getElementsByClassName("action");
+  var element2 = containerlist[currentdiv+1].getElementsByClassName("action");
+  console.log(element1[0] + "--" + element2[0]);
+  if(element1[0] != undefined) doanimate(element1[0], posthis);
+  if(element2[0] != undefined) doanimate(element2[0], posnext);
 }
+//   for(var i =0; i<animatedelements[currentdiv].length; i++)
+//   {
+//     doanimate(animatedelements[currentdiv][i], posthis);
+//     // $(animatedelements[currentdiv][i]).css("--position", posthis);
+//     // $(animatedelements[currentdiv]).css("transform", "rotate("+posthis/5+"deg)");
+//   }
+//   for(var i =0; i<animatedelements[currentdiv+1].length; i++)
+//   {
+//     // $(animatedelements[currentdiv+1][i]).css("--position", posnext);
+//     doanimate(animatedelements[currentdiv+1][i], posnext);
+//     // $(animatedelements[currentdiv+1]).css("transform", "rotate("+posnext/5+"deg)");
+//   }
+// }
 
 function doanimate(theobject, theposition)
 {
-  // console.log("classname: "+theobject.className);
-  switch (theobject.className) {
-    case ("action rotate"):
-    console.log("action rotate");
-    $(theobject).css("transform", "rotate("+theposition/5+"deg)");
-    break;
-    case("action fadein"):
-
-    break;
-    default:
-
-  }
+  $(theobject).css("transform", "rotate("+theposition/5+"deg)");
+  // // console.log("classname: "+theobject.className);
+  // switch (theobject.className) {
+  //   case ("action rotate"):
+  //   console.log("action rotate");
+  //   // $(theobject).css("transform", "rotate("+theposition/5+"deg)");
+  //   break;
+  //   case("action fadein"):
+  //
+  //   break;
+  //   default:
+  //
+  // }
 }
 
 
