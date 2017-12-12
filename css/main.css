@@ -68,6 +68,25 @@ h4 {
   /*background-color: red;*/
 }
 
+.cite {
+  font-family: 'Times-New-Roman', sans-serif;
+  text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.80), 0px 0px 30px rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size:0.5em;
+  font-style: italic;
+  display: none;
+  width: 60%;
+  /*margin-left: 5%;*/
+  /*margin-right: 5%;*/
+  /*padding: 2px;*/
+  text-align: left;
+  /*font-weight: 300;*/
+}
+
+.image:hover .cite{
+  display: block;
+}
+
 
 .cropimg{
   width: 200px;
@@ -102,7 +121,7 @@ h4 {
   width: 100%;
 
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 20% 50% 30%;
+  grid-template-rows: 20% 60% 20%;
   grid-template-areas:
         "maintext maintext maintext"
         "sub sub sub"
