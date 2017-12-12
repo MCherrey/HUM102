@@ -1,5 +1,4 @@
 window.onload=init_page;
-$(window).ready(initpages());
 window.onkeydown = smoothscroll;
 window.onscroll = getpositon;
 // $window.resize(init_div);
@@ -11,14 +10,13 @@ var containerlist = document.getElementsByClassName("Container");
 var containertops = [];
 var containerbottoms = [];
 var animatedelements = [];
-var loaded = false;
+var animating = false;
 
 function init_page()
 {
   // console.log("exicuted");
   $(window).scrollTop(0);
   init_div();
-  loaded = true;
 }
 
 function init_div()
@@ -114,8 +112,7 @@ function changeitems()
 
 function smoothscroll(e)
 {
-  if(onload == true)
-{
+  animating = true;
   if (typeof e == 'number')
   {
     {var e=e};
@@ -146,6 +143,5 @@ function smoothscroll(e)
     }
   }
   window.focus();
-}
-else $window.scrollTo(0);
+  animating = false;
 }
