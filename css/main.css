@@ -43,7 +43,7 @@ h2{
 h3 {
   font-family: 'Roboto', sans-serif;
   color: white;
-  font-size:1.75em;
+  font-size:1.35em;
   padding: 10px;
   text-align: center;
   font-weight: 300;
@@ -67,6 +67,7 @@ h4 {
   width: 100%;
   /*background-color: red;*/
 }
+
 
 .cropimg{
   width: 200px;
@@ -128,14 +129,14 @@ h4 {
   text-align: center;
 
 }
-.boxshadow{
+/*.boxshadow{
   /*max-width: 100%;
   height: auto;*/
   box-shadow: 3px 3px rgba(0, 0, 0, 0.80);
   outline-width: medium;
   outline-color: white;
 
-}
+}*/
 
 /*----------------------------------------------------------*/
 
@@ -161,6 +162,34 @@ h4 {
     transition:all 1s ease-in;
 }
 .sub:hover .hiddendiv{
+    display : block;
+    transition:all 1s ease-in;
+    /*width: 100%;*/
+    /*hieght: 100%;*/
+}
+
+.shownimg{
+  /*display: block;*/
+  /*height: 100%;
+  width: 100%;*/
+  /*align: center;*/
+  margin: 0;
+
+}
+.hiddenimg{
+    display: none;
+    /*width: 100%;
+    height: 100%;*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    /*padding-left: 3px;*/
+    /*padding-right: 3px;*/
+    margin: 0;
+}
+.image:hover .shownimg{
+    display : none;
+    transition:all 1s ease-in;
+}
+.image:hover .hiddenimg{
     display : block;
     transition:all 1s ease-in;
     /*width: 100%;*/
@@ -261,47 +290,47 @@ h4 {
 }
 
 .slide1{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/cameras-slide1.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide1.png");
 }
 
 .slide2{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/building-slide2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide2.png");
 }
 
 .slide3{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/budget-slide3.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide3.png");
 }
 
 .slide4{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/lock-slide4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide4.png");
 }
 
 .slide5{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/objective-slide5.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide5.png");
 }
 
 .slide6{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/money-slide6.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide6.png");
 }
 
 .slide7{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/run-slide7.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide7.png");
 }
 
 .slide8{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/chart-slide8.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide8.png");
 }
 
 .slide9{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/money-slide6.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide9.png");
 }
 
 .slide10{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/server-slide10.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide10.png");
 }
 
 .slide11{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/puz-slide11.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/slide11.png");
 }
 
 .slidecite{
