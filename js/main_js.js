@@ -1,6 +1,7 @@
 window.onload=init_page;
 window.onkeydown = smoothscroll;
 window.onscroll = getpositon;
+// $(window).ready(function() {)
 // $window.resize(init_div);
 
 
@@ -112,7 +113,6 @@ function changeitems()
 
 function smoothscroll(e)
 {
-  animating = true;
   if (typeof e == 'number')
   {
     {var e=e};
@@ -143,5 +143,4 @@ function smoothscroll(e)
     }
   }
   window.focus();
-  animating = false;
 }
