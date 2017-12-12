@@ -1,7 +1,7 @@
 window.onload=init_page;
-$(window).ready(initpages());
 window.onkeydown = smoothscroll;
 window.onscroll = getpositon;
+// $(window).ready(function() {)
 // $window.resize(init_div);
 
 
@@ -11,14 +11,13 @@ var containerlist = document.getElementsByClassName("Container");
 var containertops = [];
 var containerbottoms = [];
 var animatedelements = [];
-var loaded = false;
+var animating = false;
 
 function init_page()
 {
   // console.log("exicuted");
   $(window).scrollTop(0);
   init_div();
-  loaded = true;
 }
 
 function init_div()
@@ -28,14 +27,14 @@ function init_div()
   {
     containertops[i] = containerlist[i].getBoundingClientRect().top +1;
     containerbottoms[i] = containerlist[i].getBoundingClientRect().bottom;
-    // var tempcontain = containerlist[i].getElementsByClassName("action");
+    var tempcontain = containerlist[i].getElementsByClassName("action");
 
-    // animatedelements[i]=[];
-    // for(var j = 0;j<tempcontain.length;j++)
-    // {
-    //   console.log(tempcontain);
-    //   animatedelements[i][j]=tempcontain[j];
-    // }
+    animatedelements[i]=[];
+    for(var j = 0;j<tempcontain.length;j++)
+    {
+      console.log(tempcontain);
+      animatedelements[i][j]=tempcontain[j];
+    }
     console.log(containerlist[i].getBoundingClientRect().top);
     console.log(containerlist[i]);
   }
@@ -66,11 +65,11 @@ function changeitems()
   posnext = (window.pageYOffset - containertops[currentdiv+1]);
   console.log(posthis);
   console.log(posnext);
-  var element1 = containerlist[currentdiv].getElementsByClassName("action");
-  var element2 = containerlist[currentdiv+1].getElementsByClassName("action");
-  console.log(element1[0] + "--" + element2[0]);
-  if(element1[0] != undefined) doanimate(element1[0], posthis);
-  if(element2[0] != undefined) doanimate(element2[0], posnext);
+  // var element1 = containerlist[currentdiv].getElementsByClassName("action");
+  // var element2 = containerlist[currentdiv+1].getElementsByClassName("action");
+  // console.log(element1[0] + "--" + element2[0]);
+  if(animatedelements[currentdiv][0] != undefined) $(animatedelements[currentdiv][0]).css("transform", "rotate("+posthis/5+"deg)");;
+  if(animatedelements[currentdiv+1][0] != undefined) $(animatedelements[currentdiv+1][0]).css("transform", "rotate("+posnext/5+"deg)");;
 }
 //   for(var i =0; i<animatedelements[currentdiv].length; i++)
 //   {
@@ -86,22 +85,22 @@ function changeitems()
 //   }
 // }
 
-function doanimate(theobject, theposition)
-{
-  $(theobject).css("transform", "rotate("+theposition/5+"deg)");
-  // // console.log("classname: "+theobject.className);
-  // switch (theobject.className) {
-  //   case ("action rotate"):
-  //   console.log("action rotate");
-  //   // $(theobject).css("transform", "rotate("+theposition/5+"deg)");
-  //   break;
-  //   case("action fadein"):
-  //
-  //   break;
-  //   default:
-  //
-  // }
-}
+// function doanimate(theobject, theposition)
+// {
+//   $(theobject).css("transform", "rotate("+theposition/5+"deg)");
+//   // // console.log("classname: "+theobject.className);
+//   // switch (theobject.className) {
+//   //   case ("action rotate"):
+//   //   console.log("action rotate");
+//   //   // $(theobject).css("transform", "rotate("+theposition/5+"deg)");
+//   //   break;
+//   //   case("action fadein"):
+//   //
+//   //   break;
+//   //   default:
+//   //
+//   // }
+// }
 
 
 // function checkanimate(e)
@@ -113,8 +112,6 @@ function doanimate(theobject, theposition)
 // }
 
 function smoothscroll(e)
-{
-  if(onload == true)
 {
   if (typeof e == 'number')
   {
@@ -146,6 +143,4 @@ function smoothscroll(e)
     }
   }
   window.focus();
-}
-else $window.scrollTo(0);
 }
