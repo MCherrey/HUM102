@@ -59,6 +59,14 @@ h4 {
   text-align: center;
   font-weight: 300;
 }
+
+h5{
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1em;
+  color: white;
+}
 .Title{
   display: grid;
   justify-content: center;
@@ -146,7 +154,7 @@ h4 {
   /*background-color: red;*/
   overflow: hidden;
   text-align: center;
-  background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
+  /* background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0)); */
 
 }
 /*.boxshadow{
@@ -166,7 +174,7 @@ h4 {
   width: 100%;
   align: center;
   margin: 0;
-  background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
+  /* background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0)); */
 
 }
 .hiddendiv{
@@ -195,7 +203,7 @@ h4 {
   width: 100%;*/
   /*align: center;*/
   margin: 0;
-  background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
+  display: block;
 
 }
 .hiddenimg{
