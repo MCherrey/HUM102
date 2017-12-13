@@ -146,6 +146,7 @@ h4 {
   /*background-color: red;*/
   overflow: hidden;
   text-align: center;
+  background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
 
 }
 /*.boxshadow{
@@ -165,6 +166,7 @@ h4 {
   width: 100%;
   align: center;
   margin: 0;
+  background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
 
 }
 .hiddendiv{
@@ -193,6 +195,7 @@ h4 {
   width: 100%;*/
   /*align: center;*/
   margin: 0;
+  background: radial-gradient(rgba(255, 0, 0, 1), rgba(0, 0, 0, 0));
 
 }
 .hiddenimg{
